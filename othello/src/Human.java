@@ -1,13 +1,13 @@
 import java.util.HashMap;
 
-public class Human implements Player{
+public class Human implements Player {
     private int type;
 
     public Human(int type) {
         this.type = type;
     }
 
-    public boolean putDisc(boolean CanEdit, int x, int y) {
+    public boolean putDisc(boolean canEdit, int x, int y) {
         Disc[][] board = Board.getBoard();
         //checking if this coordinate is empty
         if (x > 0 && x < 9 && y > 0 && y < 9) {
@@ -37,7 +37,7 @@ public class Human implements Player{
                         break;
                     }
                 }
-                if (CanEdit && ifChange) {
+                if (canEdit && ifChange) {
                     for (int i = 0; i <= moveToEast; i++)
                         board[x + i][y].setType(type);
                 }
@@ -61,7 +61,7 @@ public class Human implements Player{
                         break;
                     }
                 }
-                if (CanEdit && ifChange) {
+                if (canEdit && ifChange) {
                     for (int i = 0; i <= moveToWest; i++)
                         board[x - i][y].setType(type);
                 }
@@ -85,7 +85,7 @@ public class Human implements Player{
                         break;
                     }
                 }
-                if (CanEdit && ifChange) {
+                if (canEdit && ifChange) {
                     for (int i = 0; i <= moveToSouth; i++)
                         board[x][y - i].setType(type);
                 }
@@ -109,7 +109,7 @@ public class Human implements Player{
                         break;
                     }
                 }
-                if (CanEdit && ifChange) {
+                if (canEdit && ifChange) {
                     for (int i = 0; i <= moveToNorth; i++)
                         board[x][y + i].setType(type);
                 }
@@ -134,7 +134,7 @@ public class Human implements Player{
                         break;
                     }
                 }
-                if (CanEdit && ifChange) {
+                if (canEdit && ifChange) {
                     for (int i = 0; i <= moveToNorth; i++)
                         board[x + i][y + i].setType(type);
                 }
@@ -157,7 +157,7 @@ public class Human implements Player{
                         break;
                     }
                 }
-                if (CanEdit && ifChange) {
+                if (canEdit && ifChange) {
                     for (int i = 0; i <= moveToNorth; i++)
                         board[x - i][y + i].setType(type);
                 }
@@ -182,7 +182,7 @@ public class Human implements Player{
                         break;
                     }
                 }
-                if (CanEdit && ifChange) {
+                if (canEdit && ifChange) {
                     for (int i = 0; i <= moveToSouth; i++)
                         board[x + i][y - i].setType(type);
                 }
@@ -207,7 +207,7 @@ public class Human implements Player{
                         break;
                     }
                 }
-                if (CanEdit && ifChange) {
+                if (canEdit && ifChange) {
                     for (int i = 0; i <= moveToSouth; i++)
                         board[x - i][y - i].setType(type);
                 }
@@ -218,8 +218,7 @@ public class Human implements Player{
                 //System.out.println("can not put here");
                 return false;
             }
-        }
-        else return false;
+        } else return false;
     }
 
     public boolean checkCanPut() {
