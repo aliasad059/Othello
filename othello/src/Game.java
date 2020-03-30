@@ -10,7 +10,7 @@ public class Game {
      * starting the game in multi (2 player mode)
      */
     public static void startMultiMod() {
-        System.out.println("Starting SoloMode!");
+        System.out.println("Starting MultiMode!");
         System.out.println("Human 1 discs are showed:" + '\u26AA');
         System.out.println("Human 2 discs are showed:" + '\u26AB');
         Board board = new Board();
